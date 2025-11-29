@@ -7,3 +7,17 @@ src/**
 .gitignore
 tsconfig.json
 vsc-extension-quickstart.md
+# Docker and build files
+Dockerfile
+docker-compose.yml
+.dockerignore
+build.log
+*.vsix
+dist/**
+# Backup and temporary files
+*.bak
+**/*.bak
+# Development config
+coverconfig.json
+.nvmrc
+.vscode-test.mjs

@@ -195,7 +195,7 @@
             "patterns": [
                 {
                     "name": "string.quoted.double.org",
-                    "match": "\\b([A-Z]{3,})\\b"
+                    "match": "\\b(NEXT|PROJECT|CANCELLED)\\b"
                 }
             ]
         },

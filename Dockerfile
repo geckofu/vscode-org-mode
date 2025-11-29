@@ -15,14 +15,11 @@ RUN npm install
 # Copy the rest of the project
 COPY . .
 
+# Generate syntax files from template
+RUN npm run generate-syntax
+
 # Compile TypeScript
 RUN npm run compile
 
-# Build the .vsix package (temporarily replace README to bypass SVG validation)
-RUN mv README.md README.md.bak && \
-    echo '# Org Mode\n\nEmacs Org mode support for VSCode' > README.md && \
-    vsce package --allow-star-activation --skip-license && \
-    mv README.md.bak README.md
-
-# The .vsix file will be in /workspace
-CMD ["sh", "-c", "ls -lh *.vsix && echo '\n✓ Build complete! Copy the .vsix file from the container.'"]
+# The .vsix file will be output to dist/ when container runs
+CMD ["sh", "-c", "vsce package -o dist/ --allow-star-activation --skip-license && ls -lh dist/*.vsix"]

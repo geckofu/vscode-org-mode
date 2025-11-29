@@ -6,4 +6,3 @@ services:
     volumes:
       # Mount current directory to preserve the .vsix output
       - ./dist:/workspace/dist
-    command: sh -c "vsce package -o dist/ --allow-star-activation --skip-license && ls -lh dist/*.vsix"

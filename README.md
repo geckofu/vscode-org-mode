@@ -9,10 +9,15 @@ We welcome issues, feature requests, and contributions to the [repo](https://git
 ## Build the extension to VSIX
 
 ```sh
-docker-compose build --progress=plain 2>&1 | tee build.log
+docker compose up --build
 ```
 
-Then find the VSIX file in the `dist` directory.
+The VSIX file will be created in the `dist/` directory.
+
+To capture build logs:
+```sh
+docker compose up --build --progress=plain 2>&1 | tee build.log
+```
 
 
 ## Features

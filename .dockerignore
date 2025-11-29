@@ -1,0 +1,10 @@
+node_modules
+out
+*.vsix
+.git
+.gitignore
+.vscode
+.vscode-test
+coverage
+.nyc_output
+*.log

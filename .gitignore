@@ -8,3 +8,9 @@ coverage/
 *.orig
 
 *.old
+
+# Build artifacts
+dist/
+*.vsix
+build.log
+*.bak

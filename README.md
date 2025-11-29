@@ -6,19 +6,11 @@ VS Code Org Mode is an extension for Visual Studio Code inspired by the venerabl
 
 We welcome issues, feature requests, and contributions to the [repo](https://github.com/vscode-org-mode/vscode-org-mode).
 
-## Build the extension to VSIX
+## Build and Install (one command)
 
 ```sh
-docker compose up --build
+./build-and-install.sh
 ```
-
-The VSIX file will be created in the `dist/` directory.
-
-To capture build logs:
-```sh
-docker compose up --build --progress=plain 2>&1 | tee build.log
-```
-
 
 ## Features
 
